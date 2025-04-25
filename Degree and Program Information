@@ -37,8 +37,9 @@
 </div>
 
 <div = id="minor">
-<h>Math Minors and their requirements</h>
-<p>Saint Marry's offers a minor in computer science, providing a basic understanding of programming and computer systems, equipping students with skills applicable to various fields</p>
-<a href = "https://catalog.saintmarys.edu/undergraduate/programs/mathematics-computer-science/computer-science-minor/" target="_blank">Computer Science Minor Requerments</a>
+  <h>Math Minors and their requirements</h>
+  <p>Saint Marry's offers a minor in computer science, providing a basic understanding of programming and computer systems, equipping students with skills applicable to various fields</p>
+  <a href = "https://catalog.saintmarys.edu/undergraduate/programs/mathematics-computer-science/computer-science-minor/" target="_blank">Computer Science Minor Requerments</a>
+</div>
 </body>
 </html>
