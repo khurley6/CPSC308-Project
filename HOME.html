@@ -3,38 +3,49 @@
 <html lang="en-us">
 
     <head>
+        <!-- ===== Page Metadata & Styles ===== -->
         <meta charset="utf-8">
 	    <title>Portal Home</title>
         <link rel="stylesheet" href="HOME.css">
         <link rel="icon" href="blue_cross.png" type="image/png">
+        <!-- Preload Google Fonts for performance -->
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap" rel="stylesheet">
 
     </head>
 
+	
     <body>
-    <div id="container">
+        <!-- ===== Navigation Bar (always visible) ===== -->
         <div id="navigation">
+
+            <!-- Logo on the left -->
             <div id="logo">
-                <img src="../IMAGES/newlogo.png" alt="blue french cross and mathematics & computer science portal logo">
+                <img src="../IMAGES/whitelogo.png" alt="blue french cross and mathematics & computer science portal logo">
             </div>
             
-            <div id="buttons">
-                <p class="pages"> <a href="HOME.html">Home</a> </p>
-                <p class="pages"> <a href="programs.html" target="_blank">Programs</a></p>
-                <p class="pages"> <a href="why_math.html" target="_blank">Why Math</a></p>
-                <p class="pages"> <a href="resources.html" target="_blank">Resources</a></p>      
+            <!-- Main menu links -->
+            <div id="menu">
+                <p class="button"> <a href="HOME.html">Home</a> </p>
+                <p class="button"> <a href="programs.html" target="_blank">Programs</a></p>
+                <p class="button"> <a href="why_math.html" target="_blank">Why Math</a></p>
+                <p class="button"> <a href="resources.html" target="_blank">Resources</a></p>      
+
             </div>    
         </div>
 
     
+  <!-- ===== Page Content Container ===== -->
+    <div id="container">
+
+        <!-- — Cover Image with Overlayed Quote — -->
         <div id="cover">
             <img src="../IMAGES/edited_lecture.jpg" alt="math professor lecturing small class with whiteboard">
             <p id="quote">Use Math to Make a Difference</p>
         </div>
 
-
+        <!-- — Introductory Text — -->
         <div id="intro">
             <p>Hello SMC Math and Computer Science students!
                 Welcome to your <span class="special"> centralized portal </span> — a space designed just for you.
@@ -55,43 +66,45 @@
                 </ul>
         </div>
 
+
+        <!-- — Quick Links Section — -->
         <h2>Quick Links</h2>
 
         <div id="quick_link_photos">
 
+            <!-- Clubs tile -->
             <a href="resources.html" target="_blank">
                 <div class="title_imgs">
                     <p class="feature_link">Clubs</p>
                     <img src="../IMAGES/honor-society.png" alt="newly inducted pi mu epsilon members pose with certificates and cords">
                 </div>
             </a>
-
+            
+            <!-- Professor Bios tile -->
             <a href="programs.html" target="_blank">
                 <div class="title_imgs">
                     <p class="feature_link">Professor Bios</p>
-                    <img src="../IMAGES/kuter.png" alt="front of haggar from the bridge on lake marion">
+                    <img src="../IMAGES/kuter.png" alt="math professor on the Avenue">
                 </div>
             </a>
 
-
+            <!-- Senior Comprehensive tile -->
             <a href="resources.html" target="_blank">
                 <div class="title_imgs">
                     <p class="feature_link">Senior Comprehensive</p>
-                    <img src="../IMAGES/stem-poster-day.png" alt="students and teachers gathered at poster boards at SMC symposium">
+                    <img src="../IMAGES/stem-poster-day.png" alt="math student at poster day">
                 </div>
             </a>
-
         </div>
-
+        
+        <!-- spacer to push footer down -->
         <div class="spacer"></div>
 
+        <!-- ===== Footer Bar ===== -->
         <div id="bottom-bar">
             <p> Made for students, by students: Paris Vivian, Samantha Gerbert, Anastacia Aguirre, Kathleen Hurley</p>
-
-    </div>
-
-    </div>
-
+        </div>
+    </div> <!-- end #container -->
 
     </body>
 
