@@ -3,3 +3,10 @@
     font-size: 25px;
     /* border: 1px red solid; */ /* Uncomment for debugging layout */
   }
+html, body {
+    /* Remove default spacing and prevent horizontal scroll */
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+    width: 100vw;
+  }
