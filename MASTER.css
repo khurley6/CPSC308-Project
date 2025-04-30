@@ -1,0 +1,360 @@
+:root{
+    --background: rgba(50, 134, 172, .85);
+}
+
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    /* background: #222; */
+    background: #ffffff;
+    font-family: "DM Sans", Arial, Helvetica, sans-serif;
+    font-weight: 400;
+}
+
+/******** Navigation Styling Start *******/
+header {
+    background: var(--background);
+    text-align: center;
+    position: fixed;
+    z-index: 1000;
+    width: 100%;
+    top: 0;
+}
+
+.logo {
+
+}
+
+.nav-toggle {
+    display: none;
+}
+
+.nav-toggle-label {
+    position: absolute;
+    top: 0;
+    left: 0;
+    margin-left: 1em;
+    height: 100%;
+    display: flex;
+    align-items: center;
+}
+
+.nav-toggle-label span,
+.nav-toggle-label span::before,
+.nav-toggle-label span::after {
+    display: block;
+    width: 2em;
+    background: white;
+    height: 2px;
+    width: 2em;
+    border-radius: 2px;
+    position: relative;
+}
+
+.nav-toggle-label span::before,
+.nav-toggle-label span::after {
+    content: '';
+    position: absolute;
+}
+
+.nav-toggle-label span::before {
+    bottom: 7px;
+}
+
+.nav-toggle-label span::after {
+    top: 7px;
+}
+
+nav {
+    position: absolute;
+    text-align: left;
+    top: 100%;
+    left: 0;
+    background: var(--background);
+    width: 100%;
+    /* display: none; */
+    transform: scale(1,0);
+    transform-origin: top;
+    transition: transform 400ms ease-in-out;
+}
+
+nav ul{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+nav li {
+    margin-bottom: 1em;
+    margin-left: 1em;
+}
+
+nav a{
+    color: white;
+    text-decoration: none;
+    font-size: 1.2rem;
+    text-transform: uppercase;
+    opacity: 0;
+    transition: opacity 150ms ease-in-out;
+}
+
+nav a:hover {
+    color: #03233e;
+}
+
+.nav-toggle:checked ~ nav {
+    /* display: block; */
+    transform: scale(1,1);
+}
+
+.nav-toggle:checked ~ nav a{
+    opacity: 1;
+    transition: opacity 250ms ease-in-out 250ms;
+}
+
+
+@media screen and (min-width: 800px) {
+    .nav-toggle-label{
+        display: none;
+    }
+
+    header {
+        display: grid;
+        grid-template-columns: 1fr auto minmax(600px, 3fr) 1fr;
+    }
+
+    .logo {
+        grid-column: 2 / span 1;
+    }
+
+    nav {
+        all: unset;
+        grid-column: 3 / 4;
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+    }
+
+    nav ul {
+        display: flex;
+        justify-content: flex-end;
+        /* border: 1px solid red; */
+    }
+
+    nav li {
+        margin-left: 3em;
+        margin-bottom: 0;
+        position: relative;
+    }
+
+    nav a{
+        opacity: 1;
+    }
+
+    nav a::before {
+        content: '';
+        display: block;
+        height: 5px;
+        background: #03233e;
+        position: absolute;
+        top: -.75em;
+        left: 0;
+        right: 0;
+        transform: scale(0, 1);
+        transition: transform ease-in-out 250ms;
+    }
+
+    nav a:hover::before {
+        transform: scale(1,1);
+    }
+}
+
+/******** Navigation Styling End *********/
+
+
+/******** HOME Page Styling Start *******/
+* {
+    /* border: 1px solid red; */
+}
+
+.home-container {
+    margin-top: 110px;
+    max-width: 100%;
+    font-size: 25px;
+    margin-bottom: 0;
+}
+
+.bigger-cover {
+    display: flex;
+    justify-content: center;
+}
+
+.cover {
+    display: flex;
+    justify-content: center;
+    position: relative;
+    max-width: 100%;
+}
+
+.cover img {
+    max-width: 100%;
+    display: flex;
+}
+
+.cover .quote {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translateX(-50%);
+    /* max-width: 80%; */
+    font-size: 3vw;
+    white-space: nowrap;
+    width: fit-content; 
+    letter-spacing: 5px;
+    text-transform: uppercase;
+    background-color: #ffffff;
+    padding: 20px;
+}
+
+.intro {
+    margin-left: 2em;
+    margin-right: 2em;
+}
+
+.special {
+    color: #f9423a; 
+}
+
+h2 {
+    background: var(--background);
+    color: white;
+    text-align: center;
+    margin-bottom: 0;
+    text-transform: uppercase;
+}
+
+.title_imgs {
+    text-align: center;
+    color: #004277;
+}
+
+.title_imgs p {
+    font-size: 2vw;
+    white-space: nowrap;
+}
+
+.quick_link_photos {
+    display: flex;
+    justify-content: space-evenly;
+    gap: 1em;
+    margin-left: 2em;
+    margin-right: 2em;
+}
+
+.quick_link_photos img {
+    /* Tile image styling */
+    width: auto;
+    border-radius: 15px;
+}
+
+.quick_link_photos a:hover {
+    font-weight: bold;
+}
+
+.spacer {
+    height: 75px;
+}
+
+.bottom-bar {
+    background: var(--background);
+    color: #ffffff;
+    font-size: small;
+    margin-bottom: 0;
+    padding-top: 2em;
+    padding-left: 1em;
+}
+
+
+/* Misc */
+a {
+    text-decoration: none;
+}
+
+img {
+    /* Prevent images from overflowing container */
+    max-width: 100%;
+}
+
+/******** HOME Page Styling End *******/
+
+
+
+/******** PROGRAMS Page Styling Start *******/
+.programs-container {
+    margin-left: 2em;
+    margin-right: 2em;
+    font-size: 25px;
+}
+
+.page-title {
+    margin-top: 3em;
+    margin-bottom: 1em;
+}
+
+.programs-link{
+    display: flex;
+    text-decoration: none;
+    color: white;
+    background-color: #004277 ;
+    border-radius: 15px;
+    justify-content: center;
+    align-items: center;
+    width: 20%;
+    max-width: 15em;
+    margin-right: 1em;
+    font-size: 80%;
+    padding: 1.5em 1em;
+    text-align: center;
+}
+
+.PAM, .CAM, .SAM, .MATH, .MATT, .minor {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: row;
+    border-color: green;
+    gap: auto;
+}
+
+.PAM p, .CAM p, .SAM p, .MATH p, .MATT p, .minor p {
+    width: 70%;
+}
+
+.requirements h {
+    font-weight: bolder;
+    font-size: 30px;
+    color:#004277;
+}
+
+.requirements {
+    margin-left: 1em;
+    margin-right: 1em;
+}
+
+.header {
+    background-color: #004277;
+    color: white;
+    padding: .5em .5em
+  }
+/******** PROGRAMS Page Styling Stop *********/
+
+
+
+
+/******** WHY MATH Page Styling Start *********/
+.why-math-container {
+    margin-top: 100px;
+}
