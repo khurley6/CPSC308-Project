@@ -1,12 +1,11 @@
 <!DOCTYPE html>
-
 <html lang="en-us">
 
     <head>
         <!-- ===== Page Metadata & Styles ===== -->
         <meta charset="utf-8">
 	    <title>Portal Home</title>
-        <link rel="stylesheet" href="HOME.css">
+        <link rel="stylesheet" href="MASTER.css">
         <link rel="icon" href="blue_cross.png" type="image/png">
         <!-- Preload Google Fonts for performance -->
         <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -15,38 +14,40 @@
 
     </head>
 
-	
     <body>
-        <!-- ===== Navigation Bar (always visible) ===== -->
-        <div id="navigation">
-
-            <!-- Logo on the left -->
-            <div id="logo">
-                <img src="../IMAGES/whitelogo.png" alt="blue french cross and mathematics & computer science portal logo">
-            </div>
-            
-            <!-- Main menu links -->
-            <div id="menu">
-                <p class="button"> <a href="HOME.html">Home</a> </p>
-                <p class="button"> <a href="programs.html" target="_blank">Programs</a></p>
-                <p class="button"> <a href="why_math.html" target="_blank">Why Math</a></p>
-                <p class="button"> <a href="resources.html" target="_blank">Resources</a></p>      
-
-            </div>    
-        </div>
-
     
-  <!-- ===== Page Content Container ===== -->
-    <div id="container">
+    <!-- ===== Navigation Bar (always visible) ===== -->
+    <header>
+        <h1 class="logo"><img src="../IMAGES/white_cross.png" width="50px"></h1>
+        <input type="checkbox" id="nav-toggle" class="nav-toggle">
+        <nav>
+            <ul>
+                <li><a href="HOME.html" target="_blank">Home</a></li>
+                <li><a href="PROGRAMS.html" target="_blank">Programs</a></li>
+                <li><a href="WHY-MATH.html" target="_blank">Why Math</a></li>
+                <li><a href="RESOURCES.html" target="_blank">Resources</a></li>
+            </ul>
+        </nav>
+        <label for="nav-toggle" class="nav-toggle-label">
+            <span></span>
+        </label>
+    </header>
+
+
+
+    <!-- ===== Page Content Container ===== -->
+    <div class="home-container">
 
         <!-- — Cover Image with Overlayed Quote — -->
-        <div id="cover">
+        <div class="bigger-cover">
+        <div class="cover">
             <img src="../IMAGES/edited_lecture.jpg" alt="math professor lecturing small class with whiteboard">
-            <p id="quote">Use Math to Make a Difference</p>
+            <p class="quote">Use Math to Make a Difference</p>
+        </div>
         </div>
 
         <!-- — Introductory Text — -->
-        <div id="intro">
+        <div class="intro">
             <p>Hello SMC Math and Computer Science students!
                 Welcome to your <span class="special"> centralized portal </span> — a space designed just for you.
                 This page brings together important links and information that are often useful but not always easy to track down.
@@ -66,22 +67,20 @@
                 </ul>
         </div>
 
-
         <!-- — Quick Links Section — -->
-        <h2>Quick Links</h2>
-
-        <div id="quick_link_photos">
+        <h2>Featured Links</h2>
+        <div class="quick_link_photos">
 
             <!-- Clubs tile -->
-            <a href="resources.html" target="_blank">
+            <a href="RESOURCES.html" target="_blank">
                 <div class="title_imgs">
                     <p class="feature_link">Clubs</p>
-                    <img src="../IMAGES/honor-society.png" alt="newly inducted pi mu epsilon members pose with certificates and cords">
+                    <img src="../IMAGES/mathclubfair.png" alt="smc math and cpsc club board members at activities fair">
                 </div>
             </a>
             
             <!-- Professor Bios tile -->
-            <a href="programs.html" target="_blank">
+            <a href="PROGRAMS.html" target="_blank">
                 <div class="title_imgs">
                     <p class="feature_link">Professor Bios</p>
                     <img src="../IMAGES/kuter.png" alt="math professor on the Avenue">
@@ -89,7 +88,7 @@
             </a>
 
             <!-- Senior Comprehensive tile -->
-            <a href="resources.html" target="_blank">
+            <a href="RESOURCES.html" target="_blank">
                 <div class="title_imgs">
                     <p class="feature_link">Senior Comprehensive</p>
                     <img src="../IMAGES/stem-poster-day.png" alt="math student at poster day">
@@ -101,11 +100,10 @@
         <div class="spacer"></div>
 
         <!-- ===== Footer Bar ===== -->
-        <div id="bottom-bar">
+        <div class="bottom-bar">
             <p> Made for students, by students: Paris Vivian, Samantha Gerbert, Anastacia Aguirre, Kathleen Hurley</p>
         </div>
     </div> <!-- end #container -->
 
     </body>
-
 </html>
