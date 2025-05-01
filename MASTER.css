@@ -1,9 +1,16 @@
 :root{
-    --background: rgba(50, 134, 172, .85);
+    --background: rgba(0, 66, 119, .95);
+    --light-blue: rgb(73, 143, 204);
+    --second: rgba(25, 60, 140, 0.85);
+    --coral: rgba(249, 67, 67, 1);
 }
 
 *, *::before, *::after {
     box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
 }
 
 body {
@@ -13,6 +20,9 @@ body {
     font-family: "DM Sans", Arial, Helvetica, sans-serif;
     font-weight: 400;
 }
+
+
+
 
 /******** Navigation Styling Start *******/
 header {
@@ -175,33 +185,65 @@ nav a:hover {
 /******** Navigation Styling End *********/
 
 
+
+
+
+
+
+
 /******** HOME Page Styling Start *******/
 * {
     /* border: 1px solid red; */
 }
 
 .home-container {
-    margin-top: 110px;
+    margin-top: 4.5em;
     max-width: 100%;
     font-size: 25px;
     margin-bottom: 0;
 }
 
+.home-sectioned-containers {
+    margin-left: 8vw;
+    margin-right: 8vw;
+}
+
+.intro p, .intro li{
+    font-size: clamp(15px, 2vw, 25px)
+}
+
+.title {
+    /* text-align: center; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    font-family: "Montserrat", sans-serif;
+    color: #2d2e37 !important;
+    font-size: clamp(35px, 3vw, 50px);
+    padding-top: 20px;
+    padding-bottom: 20px;
+    margin-top: 2rem;
+    margin-bottom: 1rem;
+}
+
 .bigger-cover {
     display: flex;
     justify-content: center;
+    margin-top: .5em;
 }
 
 .cover {
     display: flex;
     justify-content: center;
     position: relative;
-    max-width: 100%;
+    width: 100%;
 }
 
 .cover img {
-    max-width: 100%;
+    width: 100%;
     display: flex;
+    border-color: yellow;
 }
 
 .cover .quote {
@@ -210,30 +252,29 @@ nav a:hover {
     left: 50%;
     transform: translateX(-50%);
     /* max-width: 80%; */
-    font-size: 3vw;
+    font-size: clamp(3vw, 3vw, 800px);
     white-space: nowrap;
     width: fit-content; 
+    font-family: "Montserrat", sans-serif;
     letter-spacing: 5px;
     text-transform: uppercase;
     background-color: #ffffff;
     padding: 20px;
 }
 
-.intro {
-    margin-left: 2em;
-    margin-right: 2em;
-}
-
 .special {
-    color: #f9423a; 
+    color: var(--coral); 
 }
 
-h2 {
+.home-container h2 {
     background: var(--background);
     color: white;
     text-align: center;
-    margin-bottom: 0;
-    text-transform: uppercase;
+    text-align: center;
+    margin-top: 1em;
+    margin-bottom: .5em;
+    font-family: "Montserrat", sans-serif;
+    font-size: clamp(30px, 2.5vw, 40px);
 }
 
 .title_imgs {
@@ -250,8 +291,6 @@ h2 {
     display: flex;
     justify-content: space-evenly;
     gap: 1em;
-    margin-left: 2em;
-    margin-right: 2em;
 }
 
 .quick_link_photos img {
@@ -292,63 +331,377 @@ img {
 
 
 
+
+
+
+
+
+
+
+
 /******** PROGRAMS Page Styling Start *******/
+* {
+    /* border: solid 1px red */
+}
+
+#majors-minors {
+    scroll-margin-top: 132px;
+} 
+
+#course-listings,
+#course-rotation,
+#faculty{
+    scroll-margin-top: 153px;
+}
+
+.pagenav {
+    background: #4e8dc5;
+    text-align: center;
+    z-index: 3000;
+}
+
+.pagenav ul{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    display: flex;
+    justify-content: space-around;
+}
+
+.pagenav li {
+    margin-top: 1em;
+    margin-bottom: 1em;
+    margin-left: 1em;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.pagenav a{
+    color: white;
+    text-decoration: none;
+    font-size: 1.2rem;
+    text-transform: uppercase;
+    /* opacity: 0; */
+    transition: opacity 150ms ease-in-out;
+}
+
+.pagenav a:hover {
+    color: #03233e;
+}
+
 .programs-container {
-    margin-left: 2em;
-    margin-right: 2em;
+    margin-left: 8vw;
+    margin-right: 8vw;
     font-size: 25px;
 }
 
-.page-title {
-    margin-top: 3em;
-    margin-bottom: 1em;
+.programs-container p {
+    font-size: clamp(15px, 2vw, 25px);
 }
 
+.section-title {
+    text-align: center;
+    margin-top: 1em;
+    margin-bottom: 1em;
+    font-family: "Montserrat", sans-serif;
+    color: #2d2e37 !important;
+    font-size: clamp(30px, 2.5vw, 40px);
+}
+
+hr {
+    margin-top: 2em;
+    margin-bottom: 2em;
+}
+
+
+
+/** Majors Section **/
 .programs-link{
     display: flex;
     text-decoration: none;
     color: white;
-    background-color: #004277 ;
+    background-color: var(--second) ;
     border-radius: 15px;
     justify-content: center;
     align-items: center;
-    width: 20%;
+    width: 100%;
     max-width: 15em;
-    margin-right: 1em;
-    font-size: 80%;
+    /* margin-right: 1em; */
+    font-size: clamp(15px, 1vw, 25px);
     padding: 1.5em 1em;
     text-align: center;
+    border-color: yellow;
+}
+
+.programs-link:hover {
+    background-color: var(--background);
 }
 
 .PAM, .CAM, .SAM, .MATH, .MATT, .minor {
     display: flex;
+    flex-direction: column;
     justify-content: space-between;
     align-items: center;
-    flex-direction: row;
-    border-color: green;
     gap: auto;
+    height: 100%;
+    border-color: black;
 }
 
-.PAM p, .CAM p, .SAM p, .MATH p, .MATT p, .minor p {
-    width: 70%;
+.PAM p, .CAM p, .SAM p,
+.MATH p, .MATT p, .minor p {
+    width: 100%;
+    padding-left: .5em;
+    padding-right: .5em;
+    height: fit-content;
+    border-color: aqua;
 }
 
 .requirements h {
     font-weight: bolder;
-    font-size: 30px;
-    color:#004277;
+    font-size: clamp(25px, 2.25vw, 30px);
+    color:var(--coral);
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    border-color: green;
 }
 
 .requirements {
-    margin-left: 1em;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    border-color: purple;
+}
+
+.requirements > * {
+    flex: 0 1 calc((100% - 2rem) / 3);
+}
+
+.tile {
+    display: flex;
+    flex-direction: column;
+}
+
+.minor-name {
+    font-weight: 600;
+}
+
+
+
+
+/** Course Listing Section **/
+.toggle-menu {
+    width: clamp(20em, 80vw, 100);
+    height: clamp(20em, 60vw, 20em);
+    display: flex;
+    position: relative;
     margin-right: 1em;
 }
 
-.header {
+.toggle-menu input {
+    display: none;
+}
+
+.tab-name {
+    color: var(--background);
+    font-family: "DM Sans", Arial, Helvetica, sans-serif;
+    font-size: clamp(15px, 2vw, 25px);
+    height: 45px;
+    background: var(--light-blue);
+    color: #ffffff;
+    padding: 10px 30px;
+    box-sizing: border-box;
+    cursor: pointer;
+    transition: 0.25s;
+}
+
+.toggle-menu input:checked + label .tab-name {
+    background: var(--second);
+    color: white;
+    font-size: clamp(18px, 2vw, 28px);
+    font-weight: 800;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+}
+
+.tab-content {
+    position: absolute;
+    top: 50px;
+    left: 0;
+    height: clamp(8vw, 90%, 90%);
+    width: 100%;
+    overflow: scroll;
+    background: var(--second);
+    color: white;
+    font-family: "DM Sans", Arial, Helvetica, sans-serif;
+    font-size: clamp(12px, 15px, 1.5rem);
+    padding: 15px 2em;
+    box-sizing: border-box;
+    border-radius: 5px;
+    opacity: 0;
+    z-index: 0;
+    transition: 0.5s;
+}
+
+.toggle-menu input:checked
++ label .tab-content {
+    opacity: 1;
+    z-index: 1;
+}
+
+#smc-courses {
+    display: flex;
+    justify-content: center;
+}
+
+
+
+/** Course Rotation Section **/
+
+* {
+    /* border: 2px red solid; */
+}
+
+.table-wrap {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+}
+  
+.table-wrap table {
+    /* flex: 0 1 calc(50% - 1.5rem); */
+    flex: 1 1 0;
+    width: 100%;
+    border-collapse: collapse;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    background-color: #edebeb;
+    font-size: 15px;
+}
+
+th, td {
+    padding: .5rem;
+}
+
+caption {
+    background: var(--light-blue);
+    color: #fff;
+    font-size: 1.5rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    text-align: center;
+}
+
+th {
+    text-align: left;
+    background: rgb(127, 184, 233);
+}
+
+tr:nth-of-type(2n) {
+    background: #e4e4e4;
+}
+
+@media (max-width: 650px) {
+    th{
+        display: none;
+    }
+
+    td{
+        display: block;
+        padding: 0.5rem 1rem;
+    }
+
+    td::before {
+        content: attr(data-cell) ": ";
+        font-weight: 700;
+    }
+}
+
+
+
+/** Faculty Section **/
+.faculty-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+    gap: 2rem;
+  }
+  
+.faculty-card {
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+  
+.faculty-photo {
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+    border-radius: 50%;
+    margin-bottom: 0.75rem;
+}
+  
+.faculty-name {
+    margin: 0.5rem 0;
+    font-size: 1.25rem;
+}
+  
+.faculty-edu,
+.faculty-contact {
+    font-size: clamp(15px, 1vw, 25px) !important;
+    margin: 0.5rem 0;
+}
+  
+.faculty-courses {
+    list-style: none;
+    padding: 0;
+    margin-top: auto;
+}
+  
+.faculty-courses li {
+    font-size: clamp(10px, 1vw, 15px);
+    margin: 0.25rem 0;
+}
+
+
+
+
+
+
+
+.back-to-top {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    display: inline-block;
+    padding: 0.5em 1em;
+    background: var(--second);
+    color: #fff;
+    text-decoration: none;
+    border-radius: 4px;
+    font-size: 1rem;
+    opacity: 0.7;
+    transition: opacity 0.3s;
+    z-index: 1000;
+}
+
+.back-to-top:hover {
+    opacity: 1;
+}
+
+/* .header {
     background-color: #004277;
     color: white;
-    padding: .5em .5em
-  }
+    padding: .5em .5em */
+  /* } */
 /******** PROGRAMS Page Styling Stop *********/
 
 
@@ -357,4 +710,10 @@ img {
 /******** WHY MATH Page Styling Start *********/
 .why-math-container {
     margin-top: 100px;
+    margin-right: 8vw;
+    margin-left: 8vw;
+    font-size: clamp(12px, 2vw, 25px);
 }
+
+
+
