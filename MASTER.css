@@ -716,4 +716,57 @@ tr:nth-of-type(2n) {
 }
 
 
+/******** WHY MATH Page Styling Start *********/
 
+#study-abroad {
+    scroll-margin-top: 132px;
+} 
+
+#clubs-events,
+#writing,
+#faculty{
+    scroll-margin-top: 153px;
+}
+
+.locations h {
+    font-weight: bolder;
+    font-size: clamp(25px, 2.25vw, 30px);
+    color:var(--coral);
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    border-color: green;
+}
+
+.locations {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    border-color: purple;
+}
+
+.locations > * {
+    flex: 0 1 calc((100% - 2rem) / 2);
+}
+
+.RI, .HB, .MI, .CN {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    gap: auto;
+    height: 100%;
+    border-color: black;
+}
+
+a[href^="mailto:"], a[href="url"] {
+  pointer-events: auto;
+  color: white;
+  text-decoration: underline;
+}
+
+a:visited {
+  color: white;
+}
+
+/******** WHY MATH Page Styling Stop *********/
