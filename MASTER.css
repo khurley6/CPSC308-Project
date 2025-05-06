@@ -35,7 +35,7 @@ header {
 }
 
 .logo {
-
+    width: 50px;
 }
 
 .nav-toggle {
@@ -112,7 +112,7 @@ nav a{
 }
 
 nav a:hover {
-    color: #03233e;
+    color: #91c0e7;
 }
 
 .nav-toggle:checked ~ nav {
@@ -168,7 +168,7 @@ nav a:hover {
         content: '';
         display: block;
         height: 5px;
-        background: #03233e;
+        background: #91c0e7;
         position: absolute;
         top: -.75em;
         left: 0;
@@ -274,7 +274,7 @@ nav a:hover {
     margin-top: 1em;
     margin-bottom: .5em;
     font-family: "Montserrat", sans-serif;
-    font-size: clamp(30px, 2.5vw, 40px);
+    font-size: clamp(20px, 2.5vw, 40px);
 }
 
 .title_imgs {
@@ -319,7 +319,7 @@ nav a:hover {
 
 /* Misc */
 a {
-    text-decoration: none;
+    text-decoration: none !important;
 }
 
 img {
@@ -443,7 +443,6 @@ hr {
     flex-direction: column;
     justify-content: space-between;
     align-items: center;
-    gap: auto;
     height: 100%;
     border-color: black;
 }
@@ -457,7 +456,7 @@ hr {
     border-color: aqua;
 }
 
-.requirements h {
+.requirements h3 {
     font-weight: bolder;
     font-size: clamp(25px, 2.25vw, 30px);
     color:var(--coral);
@@ -492,7 +491,7 @@ hr {
 
 /** Course Listing Section **/
 .toggle-menu {
-    width: clamp(20em, 80vw, 100);
+    width: clamp(20em, 80vw, 100em);
     height: clamp(20em, 60vw, 20em);
     display: flex;
     position: relative;
@@ -501,6 +500,10 @@ hr {
 
 .toggle-menu input {
     display: none;
+}
+
+.toggle-menu > label {
+    display: inline-block;
 }
 
 .tab-name {
@@ -525,13 +528,13 @@ hr {
     border-top-right-radius: 5px;
 }
 
-.tab-content {
+.toggle-menu .tab-content {
     position: absolute;
-    top: 50px;
+    top: 45px;
     left: 0;
-    height: clamp(8vw, 90%, 90%);
     width: 100%;
-    overflow: scroll;
+    height: clamp(8vw, 90%, 90%);
+    overflow: auto;
     background: var(--second);
     color: white;
     font-family: "DM Sans", Arial, Helvetica, sans-serif;
@@ -541,11 +544,10 @@ hr {
     border-radius: 5px;
     opacity: 0;
     z-index: 0;
-    transition: 0.5s;
+    transition: opacity 0.5s;
 }
 
-.toggle-menu input:checked
-+ label .tab-content {
+.toggle-menu input:checked + label + .tab-content {
     opacity: 1;
     z-index: 1;
 }
@@ -553,7 +555,7 @@ hr {
 #smc-courses {
     display: flex;
     justify-content: center;
-}
+} 
 
 
 
@@ -656,7 +658,7 @@ tr:nth-of-type(2n) {
   
 .faculty-edu,
 .faculty-contact {
-    font-size: clamp(15px, 1vw, 25px) !important;
+    font-size: clamp(15px, 1vw, 15px) !important;
     margin: 0.5rem 0;
 }
   
@@ -707,7 +709,7 @@ tr:nth-of-type(2n) {
 
 
 
-/******** WHY MATH Page Styling Start *********/
+/******** RESOURCES Page Styling Start *********/
 .why-math-container {
     margin-top: 100px;
     margin-right: 8vw;
@@ -716,15 +718,13 @@ tr:nth-of-type(2n) {
 }
 
 
-/******** WHY MATH Page Styling Start *********/
-
 #study-abroad {
     scroll-margin-top: 132px;
 } 
 
 #clubs-events,
 #writing,
-#tutoring{
+#faculty{
     scroll-margin-top: 153px;
 }
 
@@ -754,15 +754,18 @@ tr:nth-of-type(2n) {
     flex-direction: column;
     justify-content: space-between;
     align-items: center;
-    gap: auto;
     height: 100%;
     border-color: black;
 }
 
-a[href^="mailto:"], a[href="url"] {
-  pointer-events: auto;
+.club-link {
   color: white;
-  text-decoration: underline;
+  font-style: italic;
+}
+
+.club-link:hover {
+    text-decoration: underline !important;
+    cursor: pointer;
 }
 
 a:visited {
@@ -786,4 +789,5 @@ a:visited {
   height: 100%;
 }
 
-/******** WHY MATH Page Styling Stop *********/
+/******** RESOURCES Page Styling Stop *********/
+
