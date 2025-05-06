@@ -12,13 +12,17 @@
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap" rel="stylesheet">
 
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+
     </head>
 
     <body>
     
     <!-- ===== Navigation Bar (always visible) ===== -->
     <header>
-        <h1 class="logo"><img src="../IMAGES/white_cross.png" width="50px"></h1>
+        <h1 class="logo"><img src="../IMAGES/white_cross.png" alt="white french cross"></h1>
         <input type="checkbox" id="nav-toggle" class="nav-toggle">
         <nav>
             <ul>
@@ -38,6 +42,8 @@
     <!-- ===== Page Content Container ===== -->
     <div class="home-container">
 
+        <h1 class="title">Mathematics and Computer Science Portal</h1>
+
         <!-- — Cover Image with Overlayed Quote — -->
         <div class="bigger-cover">
         <div class="cover">
@@ -47,6 +53,7 @@
         </div>
 
         <!-- — Introductory Text — -->
+        <div class="home-sectioned-containers">
         <div class="intro">
             <p>Hello SMC Math and Computer Science students!
                 Welcome to your <span class="special"> centralized portal </span> — a space designed just for you.
@@ -66,13 +73,15 @@
                         and how to prepare for your senior comprehensive project.</li>
                 </ul>
         </div>
+        </div>
 
         <!-- — Quick Links Section — -->
         <h2>Featured Links</h2>
+        <div class="home-sectioned-containers">
         <div class="quick_link_photos">
 
             <!-- Clubs tile -->
-            <a href="RESOURCES.html" target="_blank">
+            <a href="RESOURCES.html#clubs-events" target="_blank">
                 <div class="title_imgs">
                     <p class="feature_link">Clubs</p>
                     <img src="../IMAGES/mathclubfair.png" alt="smc math and cpsc club board members at activities fair">
@@ -80,7 +89,7 @@
             </a>
             
             <!-- Professor Bios tile -->
-            <a href="PROGRAMS.html" target="_blank">
+            <a href="PROGRAMS.html#faculty" target="_blank">
                 <div class="title_imgs">
                     <p class="feature_link">Professor Bios</p>
                     <img src="../IMAGES/kuter.png" alt="math professor on the Avenue">
@@ -94,6 +103,7 @@
                     <img src="../IMAGES/stem-poster-day.png" alt="math student at poster day">
                 </div>
             </a>
+        </div>
         </div>
         
         <!-- spacer to push footer down -->
