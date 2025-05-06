@@ -769,4 +769,14 @@ a:visited {
   color: white;
 }
 
+.requirements h1 {
+    font-weight: bolder;
+    font-size: clamp(25px, 2.25vw, 30px);
+    color: var(--coral);
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    border-color: green;
+}
+
 /******** WHY MATH Page Styling Stop *********/
