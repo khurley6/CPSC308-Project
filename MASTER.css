@@ -769,7 +769,7 @@ a:visited {
   color: white;
 }
 
-.requirements h1 {
+.sa-heading {
     font-weight: bolder;
     font-size: clamp(25px, 2.25vw, 30px);
     color: var(--coral);
@@ -777,6 +777,13 @@ a:visited {
     text-align: center;
     justify-content: center;
     border-color: green;
+}
+
+.center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
 }
 
 /******** WHY MATH Page Styling Stop *********/
